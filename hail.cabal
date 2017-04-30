@@ -1,0 +1,21 @@
+name: hail
+version: 0.0.1
+build-type: Simple
+cabal-version: >=1.10
+
+library
+  build-depends: base >= 4.7 && < 5,
+                 bytestring >= 0.10 && < 1,
+                 time >= 1.6 && < 2
+  default-language: Haskell2010
+  exposed-modules: Hail.Event
+  ghc-options: -Wall
+  hs-source-dirs: src
+
+test-suite hail-test
+  build-depends: base >= 4.7 && < 5, hail
+  default-language: Haskell2010
+  ghc-options: -Wall
+  hs-source-dirs: test
+  main-is: Spec.hs
+  type: exitcode-stdio-1.0
