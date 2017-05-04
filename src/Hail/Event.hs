@@ -12,7 +12,7 @@ data Event a = Event
   , eventSource :: Source
   , eventValue :: a
   }
-  deriving (Show, Functor)
+  deriving (Eq, Show, Functor)
 
 data Source = Source
   { sourceHost :: ByteString
